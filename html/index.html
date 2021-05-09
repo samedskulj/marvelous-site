@@ -4,7 +4,75 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="stylesheet" href="../css/styles.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+      defer
+    ></script>
+    <title>Marvelous</title>
   </head>
-  <body></body>
+
+  <body class="bg-dark">
+    <header class="header-nav">
+      <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-mdb-toggle="collapse"
+            data-mdb-target="#navbarTogglerDemo01"
+            aria-controls="navbarTogglerDemo01"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <i class="fas fa-bars"></i>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
+            <a class="navbar-brand me-auto" href="#">Marvelous</a>
+            <ul class="navbar-nav ml-auto  mb-lg-0">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#">O nama</a>
+              </li>
+             
+              <li class="nav-item">
+                <a
+                  class="nav-link"
+                  href="#"
+                  >API dokumentacija</a
+                >
+              </li>
+            </ul>
+
+        </div>
+      </nav>
+    </header>
+    <div
+      class="container-xl container-hero-page text-light bg-transparent bg-image"
+    >
+      <div class="row">
+        <div class="col-12 col-lg-6 marvelous-describe">
+          <div class="title-hero"><h3>Marvelous</h3></div>
+          <div class="title-describe-hero">
+            <p>Saznajte vise o Vasim najdrazim herojima!</p>
+          </div>
+          <button type="button" class="btn btn-danger">Pokreni</button>
+        </div>
+        <div class="col-12 col-lg-6 marvelous-picture">
+          <img src="../images/ironman-png.png" alt="" />
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
