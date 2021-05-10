@@ -19,7 +19,25 @@ body {
   background-repeat: no-repeat;
   background-color: transparent;
 }
-
+.title-hero {
+  width: 300px;
+  height: 100px;
+  position: relative;
+}
+.title-hero img,
+.navbar-brand img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+.navbar-brand {
+  width: 200px;
+  height: 50px;
+  position: relative;
+}
 .marvelous-describe {
   text-align: left;
   display: flex;
@@ -29,13 +47,13 @@ body {
 }
 .marvelous-describe button {
   width: 20%;
+  text-align: center;
 }
 .marvelous-describe h3 {
   font-size: 6rem;
 }
 .marvelous-describe p {
   font-size: 2.3rem;
-  font-style: italic;
 }
 .marvelous-picture img {
   position: absolute;
@@ -44,4 +62,23 @@ body {
   width: 100%;
   top: 0;
   left: 0;
+}
+.copyright-col a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
+@media only screen and (max-width: 375px) {
+  .marvelous-describe button {
+    width: 50%;
+  }
+  .marvelous-describe {
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+  }
+  .title-describe-hero p {
+    margin-top: 15px;
+    font-size: 1.1rem;
+  }
 }
