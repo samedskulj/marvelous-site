@@ -1,21 +1,27 @@
 const btnPokreni = document.querySelector(".btn-pokreni");
 const btnTest = document.querySelector(".btn-test");
 const colHeroes = document.querySelector(".row-heroes");
+const input = document.querySelector("#formControlDefault");
+
 let podaci = [];
+
 class FetchApi {
+  constructor() {
+    this.loadingAPI;
+    this.filteredAPI;
+    this.filteredNiz = [];
+  }
   testFetcha = async () => {
     const res = await fetch(
-      "https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=Iron&orderBy=name&limit=100&apikey=219d6c078d5b6a252a1a45d83cc19cfb"
+      "https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=100&apikey=219d6c078d5b6a252a1a45d83cc19cfb"
     );
     podaci = await res.json();
     console.log(podaci);
-    this.insertDiv();
+    this.insertDiv(podaci);
   };
-  insertDiv = () => {
-    let loadingAPI;
-    let loadingSeries;
-    podaci.data.results.map((hero) => {
-      loadingAPI = `
+  insertDiv = (heroji) => {
+    heroji.data.results.map((hero) => {
+      this.loadingAPI = `
       <div class = "col-12 mb-5 col-heroes" key=${hero.id}>
         <div class="first-part-col-heroes"> 
         <h3 id = "hero-name-id">${hero.name}</h3>
@@ -43,9 +49,20 @@ class FetchApi {
        </div>
        </div>
       `;
-      colHeroes.innerHTML += loadingAPI;
+      colHeroes.innerHTML += this.loadingAPI;
     });
+  };
+  fetchByNameAPI = async (e) => {
+    colHeroes.innerHTML = "";
+    const res = await fetch(
+      `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${e.target.value}&orderBy=name&limit=20&apikey=219d6c078d5b6a252a1a45d83cc19cfb`
+    );
+    this.filteredNiz = await res.json();
+    console.log(this.filteredNiz);
+    this.insertDiv(this.filteredNiz);
   };
 }
 
 const objFetchApi = new FetchApi();
+objFetchApi.testFetcha();
+input.addEventListener("keyup", objFetchApi.fetchByNameAPI);
