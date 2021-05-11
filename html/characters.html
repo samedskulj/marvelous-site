@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/characters.css" />
+    <!-- Font Awesome -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet"
+    />
+
+    <!-- MDB -->
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+      rel="stylesheet"
+    />
+    <!--Animate.css-->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    />
+    <script
+      type="text/javascript"
+      src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
+      defer
+    ></script>
+    <title>Marvelous</title>
+  </head>
+  <body class="bg-dark" onload="objFetchApi.testFetcha()">
+    <div class="container search-characters mt-5 text-light">
+      <div class="row d-flex justify-content-center align-center">
+        <div class="col-1 nazad">
+          <a href="./index.html"><i class="fas fa-arrow-left"></i></a>
+        </div>
+        <div class="col-11">
+          <div class="form-outline">
+            <input type="text" id="formControlDefault" class="form-control" />
+            <label class="form-label text-light" for="formControlDefault"
+              >Pronadji svog najdražeg heroja</label
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row row-heroes mt-5"></div>
+    </div>
+  </body>
+  <script src="../scripts/app.js" defer></script>
+</html>

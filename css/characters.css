@@ -1,0 +1,99 @@
+@import url("https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Quicksand", sans-serif;
+}
+.col-heroes {
+  box-shadow: 0px 3px 15px rgba(0, 0, 0, 0.2);
+  display: flex;
+  justify-content: space-evenly;
+  padding: 20px 20px;
+}
+.nazad {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.nazad i {
+  border: 0;
+  margin: 0;
+  padding: 0;
+  text-decoration: none;
+  color: white;
+}
+.row-heroes {
+  display: flex;
+  flex-direction: column;
+}
+.col-heroes h3 {
+  font-size: 2rem;
+  font-weight: bold;
+}
+.first-part-col-heroes {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 30%;
+}
+.second-part-col-heroes {
+  width: 50%;
+}
+.img-col-heroes {
+  position: relative;
+  width: 300px;
+  height: 400px;
+}
+.img-col-heroes img {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  object-fit: cover;
+}
+#series-id {
+  font-size: 0.8rem;
+}
+#comics-id {
+  font-size: 0.6rem;
+}
+#hero-desc {
+  width: 90%;
+}
+#hero-name-id {
+  font-size: 1.5rem;
+}
+@media only screen and (min-width: 375px) and (max-width: 765px) {
+  .first-part-col-heroes {
+    width: 100%;
+    align-items: flex-start;
+    height: 100%;
+    margin-bottom: 15px;
+  }
+  .img-col-heroes {
+    width: 100%;
+  }
+  .second-part-col-heroes {
+    width: 100%;
+  }
+  .col-heroes {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  #hero-name-id {
+    font-size: 1rem;
+  }
+}
+
+@media only screen and (max-width: 768px) {
+  .first-part-col-heroes {
+    width: 60%;
+    height: 100%;
+  }
+}
