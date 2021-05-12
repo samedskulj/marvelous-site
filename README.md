@@ -9,7 +9,7 @@ Here is why:
 * Fun way of looking at the Marvel Universe characters
 
 # How to use the app
-Just open the link. Here is the link. See, it is that simple.
+Just open the link. Here is the ![link](marvelous-site.netlify.app). See, it is that simple.
 
 # Usage
 
