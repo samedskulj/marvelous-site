@@ -16,7 +16,7 @@ class FetchApi {
       "https://gateway.marvel.com:443/v1/public/characters?orderBy=name&limit=100&apikey=219d6c078d5b6a252a1a45d83cc19cfb"
     );
     podaci = await res.json();
-    console.log(podaci);
+
     this.insertDiv(podaci);
   };
   insertDiv = (heroji) => {
@@ -58,7 +58,7 @@ class FetchApi {
       `https://gateway.marvel.com:443/v1/public/characters?nameStartsWith=${e.target.value}&orderBy=name&limit=20&apikey=219d6c078d5b6a252a1a45d83cc19cfb`
     );
     this.filteredNiz = await res.json();
-    console.log(this.filteredNiz);
+
     this.insertDiv(this.filteredNiz);
   };
 }
