@@ -25,3 +25,6 @@ Here is the list of technologies used to make this website
 * JavaScript
 * Marvel API
 
+# Deployment
+
+This site is deployed using Netlify
